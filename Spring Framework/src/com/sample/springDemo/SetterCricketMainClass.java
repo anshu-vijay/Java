@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SetterCricketMainClass {
 
 	public static void main(String[] args) {
-		//loading spring configuration file
+				//loading spring configuration file
 				ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 				//retrieve bean from spring container
 				CricketCoach theCoach = context.getBean("myCricketCoach",CricketCoach.class);						
