@@ -7,6 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+	<!--loading properties file named as sport-propertiesfile-->
+	<context:property-placeholder location="classpath:sport-propertiesfile"/>
+	
     <!-- Define your beans here -->
 	<bean id="myFortune"
 		class="com.sample.springDemo.HappyFortune">
@@ -21,11 +25,13 @@
 
 	<bean id="myCricketCoach"
 	class="com.sample.springDemo.CricketCoach">
+	
 	<!--setup setter injection-->
 	<property name = "fortuneservice" ref="myFortune"/>
+	
 	<!--literal injection-->
-	<property name = "fullname" value="Anshu Vijay"/>
-	<property name = "dept" value="Sports"/>
+	<property name = "fullname" value="${p_name}"/>
+	<property name = "dept" value="${p_dept}"/>
 	</bean>
 	
 
