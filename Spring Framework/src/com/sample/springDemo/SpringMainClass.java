@@ -12,7 +12,10 @@ public class SpringMainClass {
 		Coach theCoach2 = context.getBean("trackCoach",Coach.class);
 		//call methods from beans
 		System.out.println(theCoach.getDailyWorkout());
+		System.out.println(theCoach.getDailyFortune());
 		System.out.println(theCoach2.getDailyWorkout());
+		System.out.println(theCoach2.getDailyFortune());
+		
 		//close context
 		context.close();
 	}
