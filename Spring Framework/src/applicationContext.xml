@@ -23,6 +23,9 @@
 	class="com.sample.springDemo.CricketCoach">
 	<!--setup setter injection-->
 	<property name = "fortuneservice" ref="myFortune"/>
+	<!--literal injection-->
+	<property name = "fullname" value="Anshu Vijay"/>
+	<property name = "dept" value="Sports"/>
 	</bean>
 	
 

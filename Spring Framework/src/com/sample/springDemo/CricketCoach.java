@@ -5,6 +5,29 @@ public class CricketCoach implements Coach {
 	
 	private FortuneService fortuneservice;
 	
+	//add new field for fullname and dept
+	private String fullname;
+	private String dept;
+	
+	
+	public String getFullname() {
+		return fullname;
+	}
+
+	public void setFullname(String fullname) {
+		System.out.println("Setter Method : we are inside fullname field.");
+		this.fullname = fullname;
+	}
+
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		System.out.println("Setter Method : we are inside department field.");
+		this.dept = dept;
+	}
+
 	public CricketCoach() {
 		System.out.println("Setter Method : we are inside constructor.");
 	}
