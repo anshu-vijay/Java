@@ -17,7 +17,8 @@
 	</bean>
 		
     <bean id ="myCoach"
-		class="com.sample.springDemo.BaseballCoach">		
+		class="com.sample.springDemo.BaseballCoach"
+		scope = "prototype">		
 		<!--setup constructor injection-->
 	<constructor-arg ref="myFortune"></constructor-arg>	
     </bean>
