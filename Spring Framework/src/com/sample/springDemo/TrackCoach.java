@@ -22,5 +22,13 @@ public class TrackCoach implements Coach {
 	public String getDailyFortune() {
 		return "Track Coach: " + fortuneservice.getFortune();
 	}
-
+	
+	//add an init method
+	public void startUp() {
+		System.out.println("Trackcoach: Starting bean scope lifecycle.");
+	}
+	//add a destroy method
+	public void cleanUp() {
+		System.out.println("Trackcoach: Destroying bean scope lifecycle.");
+	}
 }
