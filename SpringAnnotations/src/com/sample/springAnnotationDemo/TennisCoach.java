@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
+	@Autowired
 	private FortuneService fortuneService;
 
 
@@ -21,11 +22,11 @@ public class TennisCoach implements Coach {
 //	}
 	
 	//define any random method
-	@Autowired
-	public void randomMethod(FortuneService theFortuneService) {
-		System.out.println("Tennis Coach: Inside the randomly used method.");
-		fortuneService = theFortuneService;
-	}
+//	@Autowired
+//	public void randomMethod(FortuneService theFortuneService) {
+//		System.out.println("Tennis Coach: Inside the randomly used method.");
+//		fortuneService = theFortuneService;
+//	}
 
 	
 //	@Autowired
