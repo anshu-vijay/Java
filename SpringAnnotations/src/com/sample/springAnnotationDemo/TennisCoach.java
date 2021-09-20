@@ -14,9 +14,16 @@ public class TennisCoach implements Coach {
 	}
 	
 	//define a setter method
+//	@Autowired
+//	public void setFortuneService(FortuneService theFortuneService) {
+//		System.out.println("Tennis Coach: Inside setFortuneService().");
+//		fortuneService = theFortuneService;
+//	}
+	
+	//define any random method
 	@Autowired
-	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println("Tennis Coach: Inside setFortuneService().");
+	public void randomMethod(FortuneService theFortuneService) {
+		System.out.println("Tennis Coach: Inside the randomly used method.");
 		fortuneService = theFortuneService;
 	}
 
