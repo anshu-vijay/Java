@@ -12,6 +12,8 @@ public class AnnotationMainClass {
 		Coach theCoach = context.getBean("tennisCoach",Coach.class);
 		//call a method on the bean
 		System.out.println(theCoach.getDailyWorkout());
+		//call new method to get daily fortune
+		System.out.println(theCoach.getDailyFortune());
 		//close the context
 		context.close();
 	}
