@@ -3,14 +3,16 @@ package com.sample;
 public class SwitchCase_char_Aa {
 
 	public static void main(String[] args) {
-		char x = 'A';
+		char x = 'B';
 		switch(x) {
-		case 'a': System.out.println("LowerCase");
+		case 'A':
+		case 'a': System.out.println(1);
 		break;
-		case 'A': System.out.println("UpperCase");
+		case 'B':
+		case 'b': System.out.println(2);
 		break;
 		default: System.out.println("Undefined");
 		}
-		//Output - UpperCase
+		//Output - 2
 	}
 }
