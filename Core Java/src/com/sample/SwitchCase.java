@@ -3,7 +3,7 @@ package com.sample;
 public class SwitchCase {
 
 	public static void main(String[] args) {
-		int x = 2;
+		int x = 2; //only int,string and enum are allowed to be used in switch
 		switch(x) {
 		case 1: System.out.println("one");
 		break;
