@@ -17,6 +17,11 @@ public class Car_pojo {
 		this.doors = doors;
 	}
 
+	@Override
+	public String toString() {
+		return "Car_pojo [tyres=" + tyres + ", driver=" + driver + ", doors=" + doors + "]";
+	}
+
 	public String getDriver() {
 		return driver;
 	}
