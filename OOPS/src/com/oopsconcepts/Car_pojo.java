@@ -21,4 +21,12 @@ public int getTyres() {
 	return tyres;
 }
 
+public void run() {
+	if (doors.equals("Closed") && driver.equals("Seated")) {
+		System.out.println("Car is running");
+	}
+	else {
+		System.out.println("Car is not running");
+	}
+}
 }
