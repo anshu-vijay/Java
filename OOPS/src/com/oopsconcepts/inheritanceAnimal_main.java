@@ -8,14 +8,21 @@ public class inheritanceAnimal_main {
 
 	public static void main(String[] args) {
 		Animal d = new Dog();
-		Dog d1 = new Dog()
+		Dog d1 = new Dog();
 		Animal c = new Cat();
 		//Dog a1 = new Animal();		Not Allowed
 		//Cat a2 = new Animal();		Not Allowed
 		Cat c1 = new Cat();
 		
-		d.eating("Buggu");	//Buggu is eating.
-		c.eating("Kitty");	//Kitty is eating.
+		d.eating("Buggu");		
+		System.out.println(d.getEat());
+		
+		c.eating("Kitty");	
+		System.out.println(c.getEat());
 	}
-
+	/*
+	 * output 
+	 * Buggu is eating.Fish 
+	 * Kitty is eating.Fish
+	 */
 }
