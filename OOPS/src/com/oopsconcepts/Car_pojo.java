@@ -6,9 +6,15 @@ public class Car_pojo {
 	private String doors;
 	
 	public Car_pojo() {
-		super();
+		//super();
 		this.driver = "absent";
 		this.doors = "opened";
+	}
+
+	public Car_pojo(String driver, String doors) {
+		//super();
+		this.driver = driver;
+		this.doors = doors;
 	}
 
 	public String getDriver() {
