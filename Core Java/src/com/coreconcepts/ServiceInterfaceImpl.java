@@ -7,4 +7,9 @@ public class ServiceInterfaceImpl implements ServiceInterface {
 		return "Anshu Vijay";
 	}
 
+	@Override
+	public String occupation() {
+		return "Developer";
+	}
+
 }
