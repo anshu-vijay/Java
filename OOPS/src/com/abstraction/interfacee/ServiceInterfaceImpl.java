@@ -1,4 +1,4 @@
-package com.coreconcepts;
+package com.abstraction.interfacee;
 
 public class ServiceInterfaceImpl implements ServiceInterface {
 

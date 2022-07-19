@@ -1,4 +1,4 @@
-package com.coreconcepts;
+package com.abstraction.interfacee;
 
 public class Service_main {
 public static void main(String args[]) {
