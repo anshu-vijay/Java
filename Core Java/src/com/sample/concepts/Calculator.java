@@ -1,4 +1,4 @@
-package com.sample;
+package com.sample.concepts;
 
 public class Calculator {
 	public int add(int a, int b) {

@@ -1,4 +1,4 @@
-package com.sample;
+package com.sample.concepts;
 
 public class SwitchCase_char_Aa {
 

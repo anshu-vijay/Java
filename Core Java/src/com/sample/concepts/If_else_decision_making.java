@@ -1,4 +1,4 @@
-package com.sample;
+package com.sample.concepts;
 
 public class If_else_decision_making {
 

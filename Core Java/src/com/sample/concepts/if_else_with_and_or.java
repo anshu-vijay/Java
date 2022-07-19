@@ -1,4 +1,4 @@
-package com.sample;
+package com.sample.concepts;
 
 public class if_else_with_and_or {
 

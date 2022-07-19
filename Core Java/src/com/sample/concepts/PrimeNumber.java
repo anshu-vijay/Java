@@ -1,4 +1,4 @@
-package com.sample;
+package com.sample.concepts;
 
 import java.util.Scanner;
 
