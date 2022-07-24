@@ -17,4 +17,8 @@ public class ArrayListMethods {
 		}
 		System.out.println("No, list contains few items");	
 	}
+	
+	public void printFirstElement(ArrayList<String> carsList) {
+		System.out.println(carsList.get(0));	//1
+	}
 }

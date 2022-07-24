@@ -14,6 +14,7 @@ public class ArrayList_main1 {
 
 		ArrayListMethods method = new ArrayListMethods();
 		method.display(carsList); // [Volvo, BMW, Ford, Mazda]
+		method.printFirstElement(carsList);	//Volvo
 		method.displayLastOccurence(carsList, "BMW");	//1
 		method.isEmpty(carsList);	//No, list contains few items
 	}
