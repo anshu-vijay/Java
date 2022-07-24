@@ -30,6 +30,7 @@ public class Solution2 {
 		 */
 		method.printFirstElement(studentList); // Anshu Vijay
 		method.isEmpty(studentList); // No, list contains few items
+		
 
 	}
 

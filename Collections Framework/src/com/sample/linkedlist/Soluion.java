@@ -19,6 +19,7 @@ public class Soluion {
 		method.printFirstElement(carsList);	//Volvo
 		method.displayLastOccurence(carsList, "BMW");	//1
 		method.isEmpty(carsList);	//No, list contains few items
+		method.newEntry(carsList, 2,"Creta");
 	}
 
 }

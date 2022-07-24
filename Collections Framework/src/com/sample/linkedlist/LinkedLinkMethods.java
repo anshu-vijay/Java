@@ -21,4 +21,12 @@ public class LinkedLinkMethods {
 	public void printFirstElement(LinkedList<String> carsList) {
 		System.out.println(carsList.get(0));	//1
 	}
+
+	public void newEntry(LinkedList<String> carsList,int index, String newName) {
+		carsList.add(index, newName);
+		System.out.println(carsList); 	//[Volvo, BMW, Creta, Ford, Mazda]
+		carsList.addFirst("Honda City");
+		System.out.println(carsList); 	//[Honda City, Volvo, BMW, Creta, Ford, Mazda]
+		
+	}
 }
