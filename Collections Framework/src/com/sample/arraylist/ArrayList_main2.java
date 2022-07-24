@@ -16,6 +16,7 @@ public class ArrayList_main2 {
 		studentList.add(s2);
 		studentList.add(s3);
 		studentList.add(s4);
+		studentList.add(new Student(5,"Sagar Vijay",70));
 		
 		ArrayListMethods2 method = new ArrayListMethods2();
 		
@@ -25,6 +26,7 @@ public class ArrayList_main2 {
 		 * Mahi Vijay 
 		 * Ankit Vijay 
 		 * Akshat Vijay
+		 * Sagar Vijay
 		 */
 		method.printFirstElement(studentList);	//Anshu Vijay
 		method.isEmpty(studentList);		//No, list contains few items
