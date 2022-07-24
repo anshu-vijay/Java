@@ -13,13 +13,8 @@ public class Sorting {
 		carsList.add("Ford");
 		carsList.add("Mazda");
 		carsList.sort(null);
-		for (String car: carsList)
-		System.out.println(car);
+		
+		System.out.println(carsList);
 	}
-	/*
-	 * BMW 
-	 * Ford 
-	 * Mazda 
-	 * Volvo
-	 */
+	//[BMW, Ford, Mazda, Volvo]
 }
