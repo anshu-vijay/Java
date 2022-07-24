@@ -27,7 +27,7 @@ public class ArrayList_main2 {
 		 * Akshat Vijay
 		 */
 		method.printFirstElement(studentList);	//Anshu Vijay
-		method.isEmpty(studentList);		No, list contains few items
+		method.isEmpty(studentList);		//No, list contains few items
 	}
 
 }
