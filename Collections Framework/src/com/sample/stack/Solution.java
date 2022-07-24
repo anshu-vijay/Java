@@ -17,6 +17,7 @@ public class Solution {
 		System.out.println(stackObj); 	//[20, 50, 70, 90]
 		
 		System.out.println("peek: " + stackObj.peek()); 	//peek: 90
+		
 	}
 
 }

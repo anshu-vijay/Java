@@ -1,18 +1,20 @@
-package com.sample.arraylist;
+package com.sample.linkedlist;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
-public class ArrayList_main1 {
+import com.sample.arraylist.ArrayListMethods;
+
+public class Soluion {
 
 	public static void main(String[] args) {
-		//used for storin and accessing data
-		ArrayList<String> carsList = new ArrayList<String>();
+		//Used to manipulate data
+		LinkedList<String> carsList = new LinkedList<String>();
 		carsList.add("Volvo");
 		carsList.add("BMW");
 		carsList.add("Ford");
 		carsList.add("Mazda");
-
-		ArrayListMethods method = new ArrayListMethods();
+		
+		LinkedLinkMethods method = new LinkedLinkMethods();
 		method.display(carsList); // [Volvo, BMW, Ford, Mazda]
 		method.printFirstElement(carsList);	//Volvo
 		method.displayLastOccurence(carsList, "BMW");	//1
