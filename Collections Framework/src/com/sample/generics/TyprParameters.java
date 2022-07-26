@@ -36,6 +36,9 @@ public class TyprParameters {
 		Example<Integer, String> obj = new Example(1, "Anshu");
 		System.out.println(obj);
 		obj.display("Element", 105);
+		
+//		Example [key=1, value=Anshu]
+//		Element= Element Number= 105
 	}
 
 }
