@@ -1,0 +1,59 @@
+package com.sample.controller;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sample.dao.StudentAssignmentDao;
+import com.sample.entity.StudentAssignment;
+import com.sample.entity.StudentAssignmentReport;
+import com.sample.entity.StudentAssignmentSubmission;
+import com.sample.services.ManageAssignmentService;
+import com.sample.services.StudentAssignmentReportService;
+import com.sample.services.StudentAssignmentSubmissionService;
+
+@RestController
+public class ReportSchedulerController {
+	@Autowired
+	StudentAssignmentDao studentAssignmentDao;
+	@Autowired
+	ManageAssignmentService manageAssignmentService;
+
+	@Autowired
+	StudentAssignmentSubmissionService studentAssignmentSubmissionService;
+
+	@Autowired
+	StudentAssignmentReportService studentAssignmentReportService;
+
+	@Scheduled(fixedDelay = 100000)
+	public void addReport() {
+		List<StudentAssignment> studentAssignment = studentAssignmentDao.findAssignmentPendingWithStudent();
+
+		List<StudentAssignmentSubmission> studentAssignmentSubmitted = studentAssignmentSubmissionService
+				.findAllSubmission();
+
+		for (StudentAssignmentSubmission submittedSA : studentAssignmentSubmitted) {
+			StudentAssignmentReport report = new StudentAssignmentReport();
+			report.setStudent(submittedSA.getStudent());
+
+			LocalDateTime assignmentStartDate = submittedSA.getAssignment().getAssignmentStartDate();
+			report.setAssignment(submittedSA.getAssignment());
+
+			Long score = submittedSA.getFileSize() +  submittedSA.getSubmissionDate().toEpochSecond(null) - assignmentStartDate.toEpochSecond(null);
+			report.setScore(score);
+
+			studentAssignmentReportService.saveOrUpdate(report);
+		}
+		List<StudentAssignment> pendingStudentAssignments = studentAssignmentDao.findAssignmentPendingWithStudent();
+
+		for (StudentAssignment pendingStudentAssignment : pendingStudentAssignments) {
+
+			System.out.println(pendingStudentAssignment.getStudent().getFirstName() + " "
+					+ pendingStudentAssignment.getAssignment().getAssignmentName());
+		}
+	}
+
+}

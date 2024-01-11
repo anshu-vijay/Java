@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "bfdc6428-50b5-4a84-93d7-da9e5ab12d0d",
+		"name": "SM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32112305"
+	},
+	"item": [
+		{
+			"name": "Get student by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"first_name\": \"Mahi\",\n    \"last_name\": \"Vijay\",\n    \"city\": \"Mumbai\",\n    \"department\": {\n        \"d_id\": 1\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"s_id\": 3,\n    \"first_name\": \"Mahi\",\n    \"last_name\": \"Vijay\",\n    \"city\": \"Indore\",\n    \"department\": {\n        \"d_id\": 1\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/deactivate/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"deactivate",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get department by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/department/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"department",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/department/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"department",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"department_name\": \"EC\",\n    \"hod_name\": \"Amit Khare\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/department/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"department",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update department",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"d_id\": 1,\n    \"department_name\": \"CSE\",\n    \"hod_name\": \"Devashree\"\n    // \"active_flag\": \"Y\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/department/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"department",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate department",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/department/deactivate/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"department",
+						"deactivate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get assignment by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/assignment/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all assignments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/assignment/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new assignment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"assignment_name\": \"Assignment 3\",\n    \"assignment_start_date\": \"2024-01-04 00:00\",\n    \"assignment_end_date\": \"2024-01-05 00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/assignment/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update assignment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"a_id\": 1,\n    \"assignment_name\": \"Assignment 1\",\n    \"assignment_start_date\": \"2024-01-01 00:00\",\n    \"assignment_end_date\": \"2024-01-15 00:00\",\n    \"active_flag\": \"Y\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/assignment/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate assignment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/assignment/deactivate/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"deactivate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all students by department name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/department/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"department",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Allot assignment to student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student-assignment/assign?s_id=1&a_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student-assignment",
+						"assign"
+					],
+					"query": [
+						{
+							"key": "s_id",
+							"value": "1"
+						},
+						{
+							"key": "a_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assignment Submission",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/anshuvijay/Anshu Imp Documents/Anshu Vijay Resume.docx"
+						},
+						{
+							"key": "s_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "a_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/assignment/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student and Assignment list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/anshuvijay/Anshu Imp Documents/Anshu Vijay Resume.docx"
+						},
+						{
+							"key": "a_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "s_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/student-assignment/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student-assignment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pending Submission",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/anshuvijay/Anshu Imp Documents/Anshu Vijay Resume.docx"
+						},
+						{
+							"key": "a_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "s_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/student-assignment/pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student-assignment",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Global Exception handler - springmvc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getStudentDetails/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getStudentDetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

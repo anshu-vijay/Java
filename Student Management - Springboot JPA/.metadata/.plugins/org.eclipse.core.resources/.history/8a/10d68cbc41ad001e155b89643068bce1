@@ -1,0 +1,57 @@
+package com.sample.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sample.dao.StudentAssignmentDao;
+import com.sample.entity.Assignment;
+import com.sample.entity.Student;
+import com.sample.entity.StudentAssignment;
+import com.sample.services.ManageAssignmentService;
+import com.sample.services.ManageStudentService;
+import com.sample.services.StudentAssignmentService;
+
+@RestController
+@RequestMapping("/student-assignment")
+public class StudentAssignmentController {
+
+	@Autowired
+	StudentAssignmentDao studentAssignmentDao;
+	
+	@Autowired
+	ManageStudentService manageStudentService;
+	
+	@Autowired
+	StudentAssignmentService studentAssignmentService;
+	
+	@Autowired
+	ManageAssignmentService manageAssignmentService;
+
+	@GetMapping("/")
+	List<StudentAssignment> getStudentAssignmentList() {
+		return studentAssignmentDao.getStudentAssignmentList();
+	}
+
+	@GetMapping("/pending")
+	List<StudentAssignment> findAssignmentPendingWithStudent() {
+		return studentAssignmentDao.findAssignmentPendingWithStudent();
+	}
+	
+	@PostMapping("/assign")
+	private StudentAssignment asignmentToStudent(Long s_id, Long a_id) {
+		StudentAssignment assign = new StudentAssignment();
+
+		Student student = manageStudentService.getStudentById(s_id);
+		assign.setStudent(student);
+
+		Assignment assignment = manageAssignmentService.getAssignmentById(a_id);
+		assign.setAssignment(assignment);
+
+		return studentAssignmentService.saveOrUpdate(assign);
+	}
+}
