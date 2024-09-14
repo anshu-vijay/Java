@@ -1,0 +1,15 @@
+
+	@GetMapping(value = "", produces = { MediaType.APPLICATION_PDF_VALUE })
+	public ResponseEntity<InputStreamResource> download() throws IOException {
+
+		ClassPathResource pdfFile = new ClassPathResource("files/temp.pdf");
+		HttpHeaders headers = new HttpHeaders();
+
+		headers.setContentLength(pdfFile.contentLength());
+		
+		ResponseEntity<InputStreamResource> response = new ResponseEntity<InputStreamResource>(
+				new InputStreamResource(pdfFile.getInputStream()), headers, HttpStatus.OK);
+		
+		return response;
+
+	}
