@@ -47,6 +47,22 @@ public class MergeTwoSortedArrays {
 		}
 
 	}
+	
+	public static void merge(int[] nums1, int m, int[] nums2, int n) {
+		int len1 = nums1.length;
+		int len2 = nums2.length;
+		int j = 0;
+		for (int i = m; i < len1; i++) {
+			if (n>j) {
+			nums1[i] = nums2[j];
+			++j;
+			}
+		}
+		
+		Arrays.sort(nums1);
+		System.out.print(Arrays.toString(nums1));
+
+	}
 
 	private static void print(int[] arr) {
 		for (int element : arr) {
