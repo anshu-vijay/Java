@@ -26,7 +26,6 @@ public class User {
     @Transient
     private List<Rating> ratings=new ArrayList<>();
 
-
     public User(Long userId, String name, String email, String about, List<Rating> ratings) {
         this.userId = userId;
         this.name = name;

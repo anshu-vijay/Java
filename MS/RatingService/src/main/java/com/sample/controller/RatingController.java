@@ -29,8 +29,8 @@ public class RatingController {
     //get all of user
 
     @GetMapping("/users/{userId}")
-    public ResponseEntity<List<Rating>> getRatingsByUserId(@PathVariable Long userId) {
-        return ResponseEntity.ok(ratingService.getRatingByUserId(userId));
+    public List<Rating> getRatingsByUserId(@PathVariable Long userId) {
+        return ratingService.getRatingByUserId(userId);
     }
 
     //get all of hotels
