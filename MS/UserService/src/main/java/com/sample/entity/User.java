@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class User {
@@ -25,6 +26,25 @@ public class User {
 
     @Transient
     private List<Rating> ratings=new ArrayList<>();
+
+/*    Compares the current object (this) with another object.
+    It considers two users equal if their userId and email are the same.
+    These fields are likely to uniquely identify a user in your application.*/
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(userId, user.userId) &&
+                Objects.equals(email, user.email);
+    }
+/*  Generates  Generates a hash code based on userId and email.
+    This ensures that objects that are equal (equals returns true) will have the same hash code,
+    fulfilling the contract between equals and hashCode.*/
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, email);
+    }
 
     public User(Long userId, String name, String email, String about, List<Rating> ratings) {
         this.userId = userId;
